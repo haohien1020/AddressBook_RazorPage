@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\ki7\PRN222\ProjectAddressBook\AddressBook\AddressBook
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/ki7/PRN222/ProjectAddressBook/AddressBook/AddressBook/Pages/Contacts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/ki7/PRN222/ProjectAddressBook/AddressBook/AddressBook/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

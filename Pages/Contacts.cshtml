@@ -1,0 +1,39 @@
+﻿@page
+@model AddressBook.Pages.ContactsModel
+
+
+@{
+    ViewData["Title"] = "Danh bạ";
+}
+<h1>Danh sách liên lạc</h1>
+
+@if (Model.Contacts == null || !Model.Contacts.Any())
+{
+    <p>Không có liên lạc nào trong danh bạ.</p>
+}
+else
+{
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Họ tên</th>
+                <th>Email</th>
+                <th>Điện thoại</th>
+                <th>Địa chỉ</th>
+                <th>Ngày tạo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Contacts)
+            {
+                <tr>
+                    <td>@item.FullName</td>
+                    <td>@item.Email</td>
+                    <td>@item.Phone</td>
+                    <td>@item.Address</td>
+                    <td>@item.CreatedAt</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}   
