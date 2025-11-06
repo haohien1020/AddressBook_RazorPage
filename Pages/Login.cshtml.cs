@@ -48,7 +48,8 @@ namespace AddressBook.Pages
             if (user.Role == "Admin")
                 return RedirectToPage("/Contacts/AdminView");
             else
-                return RedirectToPage("/Contacts");
+                return RedirectToPage("/Contacts", new { userId = user.Id });
+
         }
     }
 }
