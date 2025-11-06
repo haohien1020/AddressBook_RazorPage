@@ -1,7 +1,18 @@
-var builder = WebApplication.CreateBuilder(args);
+﻿var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // thời gian hết hạn session
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+builder.Services.AddHttpContextAccessor(); // cần cho việc truy cập HttpContext
+builder.Services.AddRazorPages();
+builder.Services.AddSession();
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
@@ -17,7 +28,7 @@ app.UseRouting();
 app.UseAuthorization();
 app.MapGet("/", context =>
 {
-    context.Response.Redirect("/Contacts");
+    context.Response.Redirect("/Login");
     return Task.CompletedTask;
 });
 

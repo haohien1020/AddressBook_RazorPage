@@ -15,7 +15,9 @@ public partial class AddressBookDbContext : DbContext
     {
     }
 
-    public virtual DbSet<Contact> Contacts { get; set; }
+    public virtual DbSet<Contact> Contacts { get; set; } 
+
+    public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
